@@ -3,6 +3,7 @@ import Input, { InputTypes } from './Input';
 import Button from './Button';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import ButtonProps from './Button';
 
 const LoginContainer = styled.div`
   display: flex;
@@ -31,7 +32,7 @@ interface FormProps {
   title: string;
 }
 
-const LogIn: FC<FormProps> = (title) => {
+const LogIn: FC<FormProps> = (title, buttonText) => {
   return (
     <LoginContainer>
       <Form>
@@ -52,8 +53,8 @@ const LogIn: FC<FormProps> = (title) => {
           labelText='Password'
           // errorText='wrong password bitch'
         />
-        <Button>Login</Button>
-        <Link to='register'>Create new account?</Link>
+        <Button buttonText='d'></Button>
+        <Link to='registrationpage'>Create new profile?</Link>
       </Form>
     </LoginContainer>
   );

@@ -15,9 +15,12 @@ const StyledButton = styled.button`
     background: linear-gradient(90deg, #4b6cb7 100%, #182848 100%);
   }
 `;
+export interface ButtonProps {
+  buttonText: string;
+}
 
-const Button: FC = () => {
-  return <StyledButton>Login</StyledButton>;
+const Button: FC<ButtonProps> = ({ buttonText }) => {
+  return <StyledButton>{buttonText}</StyledButton>;
 };
 
 export default Button;
